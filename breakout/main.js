@@ -25,8 +25,8 @@ var main = {
 
 		this.ball = game.add.sprite(200, 300, 'ball');
 		game.physics.arcade.enable(this.ball);
-		this.ball.body.velocity.x = 200;
-		this.ball.body.velocity.y = 200;
+		this.ball.body.velocity.x = Math.floor(Math.random() * 400) - 200;
+		this.ball.body.velocity.y = Math.floor(Math.random() * 400);
 		this.ball.body.collideWorldBounds = true;
 		this.ball.body.bounce.x = 1;
 		this.ball.body.bounce.y = 1;
