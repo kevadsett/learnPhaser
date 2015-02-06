@@ -42,6 +42,10 @@ var main = {
 
 		game.physics.arcade.collide(this.paddle, this.ball);
 		game.physics.arcade.collide(this.ball, this.bricks, this.hit, null, this);
+
+		if (this.ball.y + this.ball.height >= game.height) {
+			game.state.start('main');
+		}
 	},
 	hit: function(ball, brick) {
 		brick.kill();
